@@ -1,0 +1,39 @@
+ai-live-virtual-try-on/
+├── README.md
+├── .gitignore
+├── project-structure.txt
+├── backend/
+│   ├── .env.example
+│   ├── requirements.txt
+│   └── app/
+│       ├── __init__.py
+│       ├── config.py
+│       ├── decart_adapter.py
+│       └── main.py
+├── frontend/
+│   ├── .env.example
+│   ├── index.html
+│   ├── package.json
+│   ├── public/
+│   │   └── garments/
+│   │       ├── black-tshirt.svg
+│   │       ├── greenshirt.svg
+│   │       ├── red-shirt.svg
+│   │       └── white-tshirt.svg
+│   ├── src/
+│   │   ├── App.tsx
+│   │   ├── main.tsx
+│   │   └── styles.css
+│   ├── tsconfig.app.json
+│   ├── tsconfig.json
+│   ├── tsconfig.node.json
+│   └── vite.config.ts
+└── scripts/
+    ├── run-backend-windows.bat
+    └── run-frontend-windows.bat
+
+Runtime:
+- Frontend: Node.js + npm + Vite (no Docker)
+- Backend: Python + venv + FastAPI (no Docker)
+- Realtime VTO: Decart JS SDK + Lucy VTON 3.5 via WebRTC
+- Local laptop GPU: not required for the VTO inference
